@@ -1,0 +1,85 @@
+.container_content {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.game_view_wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1px;
+	margin: 0 25px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	color: rgb(253, 173, 0);
+}
+
+.server_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.wrapper_change_server {
+	display: flex;
+	border: 1px solid rgb(55, 107, 45);
+	border-radius: 25px;
+}
+
+button:active,
+button:focus {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+}
+
+.change_server button {
+	width: 150px;
+	height: 50px;
+	padding: 20px 2px;
+	text-align: center;
+	color: rgb(253, 173, 0);
+	cursor: pointer;
+	transition: .4s;
+	border: none;
+	background-color: rgb(41, 35, 35);
+}
+
+.change_server button:hover {
+	border-radius: 25px;
+	box-shadow: 0 0 5px 1px rgb(253, 173, 0) inset;
+	transition: .4s;
+}
+
+.btn.server_one {
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.btn.server_three {
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.change_server button.active {
+	font-weight: bold;
+	background-color: rgb(255, 189, 46);
+	color: rgb(41, 35, 35);
+}
+
+.game_name,
+.description_server {
+	margin: 20px 0 0;
+	font-size: 2rem;
+}
+
+.description_server p {
+	margin: 5px 0 0;
+}

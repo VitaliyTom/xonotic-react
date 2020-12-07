@@ -1,0 +1,87 @@
+.players {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 20px 0;
+}
+
+.spectator,
+.played {
+	min-width: 25%;
+	border: 1px solid rgb(55, 107, 45);
+}
+
+.spectator {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+.spectator :last-child {
+	margin-bottom: 20px;
+}
+
+.spectator h3,
+.played h3 {
+	margin: 15px;
+}
+
+.played {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 70%;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+.played h3 {
+	display: block;
+}
+
+.team {
+	display: flex;
+	width: 100%;
+}
+
+.team.cts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.team.cts :last-child {
+	margin-bottom: 20px;
+}
+
+.red_team,
+.blue_team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 50%;
+	margin-bottom: 20px;
+}
+
+.red_team h4,
+.blue_team h4 {
+	text-align: center;
+	margin: 15px;
+}
+
+.red_team_text {
+	color: rgb(255, 1, 1);
+}
+
+.blue_team_text {
+	color: rgb(0, 204, 255);
+}
+
+.played_text,
+.spectators_text {
+	color: rgb(253, 173, 0);
+}

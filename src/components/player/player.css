@@ -1,0 +1,58 @@
+.player_name {
+	font-size: 2.3rem;
+	text-shadow: 1px 0px 2px black;
+}
+
+.spectator .player {
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	background: linear-gradient(36deg, rgba(89, 88, 85, 1) 0%, rgba(80, 71, 52, 1) 58%);
+}
+
+.played .player {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	height: 85px;
+	padding: 10px;
+}
+
+.player {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin: 10px;
+	box-shadow: 0 0 5px 1px rgb(253, 173, 0);
+	border-radius: 8px;
+	text-shadow: 1px 0px 2px black;
+}
+
+.team.cts .player {
+	background: rgb(45, 70, 56);
+	box-shadow: 0 0 8px 1px rgb(146, 255, 164);
+}
+
+.team.cts .player .ping {
+	margin: 0;
+}
+
+.spectator .player .ping {
+	margin: 0;
+	margin-left: 15px;
+	font-size: 1.5rem;
+	text-shadow: 1px 0px 2px black;
+}
+
+.red_team .player {
+	background: radial-gradient(circle, rgba(98, 11, 16, 1) 5%, rgba(75, 2, 2, 1) 39%, rgba(195, 117, 108, 1) 100%);
+	box-shadow: 0 0 8px 1px rgb(255, 1, 1);
+}
+
+.blue_team .player {
+	background: radial-gradient(circle, rgba(2, 58, 75, 1) 5%, rgba(7, 34, 42, 1) 39%, rgb(89, 161, 160) 100%);
+	box-shadow: 0 0 8px 1px rgb(0, 204, 255);
+}

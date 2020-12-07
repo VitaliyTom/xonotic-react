@@ -1,0 +1,81 @@
+.loading {
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	font-size: 4rem;
+	z-index: 100;
+}
+
+.wrapper_shadow.active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.wrapper_spinner {
+	display: none;
+	position: relative;
+	width: 256px;
+	height: 256px;
+}
+
+.wrapper_spinner.active {
+	position: relative;
+	display: block;
+	width: 256px;
+	height: 256px;
+}
+
+.spinner.active {
+	position: absolute;
+	display: block;
+	width: 256px;
+	height: 256px;
+	border-radius: 50%;
+	background-image: url('../../assets/xonotic_256.png');
+	z-index: 100;
+}
+
+.wrapper_spinner.active .shadow {
+	position: absolute;
+	width: 256px;
+	height: 256px;
+	border-radius: 50%;
+	background-color: rgba(253, 173, 0, 0.3);
+	animation: Shadow 1.5s ease-out infinite;
+	z-index: 30;
+}
+
+.wrapper_spinner.active .shadow.one {
+	animation-delay: 0s;
+}
+
+.wrapper_spinner.active .shadow.two {
+	animation-delay: .4s;
+}
+
+.wrapper_spinner.active .shadow.three {
+	animation-delay: .8s;
+}
+
+.loading_text {
+	position: absolute;
+	bottom: -150px;
+	left: 25%;
+	color: rgba(253, 173, 0);
+	z-index: 150;
+}
+
+@keyframes Shadow {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.4);
+		background-color: rgba(253, 173, 0, 0);
+		filter: blur(2px);
+	}
+}

@@ -1,1 +1,1 @@
-# xonotic-react
+# Xonotic-react
