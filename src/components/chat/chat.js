@@ -45,6 +45,7 @@ export default class Chat extends Component {
 				>
 					Chat
 				</p>
+				{/*  eslint-disable-next-line  */}
 				<iframe
 					className="chat"
 					src="https://webchat.quakenet.org/?channels=theregulars&uio=OT10cnVlJjExPTMxf2"

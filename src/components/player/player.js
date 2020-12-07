@@ -14,7 +14,7 @@ export default class Player extends Component {
 	}
 
 	render() {
-		const { name, ping, score, team } = this.state.item;
+		const { name, ping, score} = this.state.item;
 		return (
 			<React.Fragment>
 				<HtmlComponent name={ReactHtmlParser(name === '' ? 'anonymous' : name)} />

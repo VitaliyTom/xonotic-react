@@ -33,7 +33,7 @@ export default class Players extends Component {
 	}
 
 	render() {
-		const { played, spectator, redTeam, blueTeam, items } = this.state;
+		const { played, spectator, redTeam, blueTeam } = this.state;
 		return (
 			<React.Fragment>
 				<div className="spectator">
