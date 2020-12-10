@@ -28,7 +28,7 @@ export default class Map extends Component {
 		return (
 			<React.Fragment>
 				<img className="image" src={this.state.mapImg.toLowerCase()} alt="map" />
-				<p>map: {this.props.nameMap}</p>
+				<p><span className="description_map_text">map: </span>{this.props.nameMap}</p>
 			</React.Fragment>
 		);
 	}

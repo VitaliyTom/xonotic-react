@@ -48,6 +48,12 @@ export default class Content extends Component {
 					status
 				}
 			] = data;
+
+			const wrapperSpinner = document.querySelector('.wrapper_spinner');
+			const loading = document.querySelector('.loading');
+			const wrapperShadow = document.querySelector('.wrapper_shadow');
+			const spinner = document.querySelector('.spinner');
+
 			if (
 				name !== 'SYSERROR' &&
 				status !== 'timeout' &&
@@ -71,16 +77,26 @@ export default class Content extends Component {
 					status: status,
 					rules: rules
 				});
+
+				wrapperSpinner.classList.add('deActive');
+				loading.classList.remove('deActive');
+				wrapperShadow.classList.add('deActive');
+				spinner.classList.add('deActive');
+
+				spinner.classList.remove('active');
+				wrapperSpinner.classList.remove('active');
+				loading.classList.remove('active');
+				wrapperShadow.classList.remove('active');
 			} else {
 				this.setState({
 					isLoaded: false
 				});
 
 				if (flag) {
-					const wrapperSpinner = document.querySelector('.wrapper_spinner');
-					const loading = document.querySelector('.loading');
-					const wrapperShadow = document.querySelector('.wrapper_shadow');
-					const spinner = document.querySelector('.spinner');
+					wrapperSpinner.classList.remove('deActive');
+					loading.classList.remove('deActive');
+					wrapperShadow.classList.remove('deActive');
+					spinner.classList.remove('deActive');
 
 					wrapperSpinner.classList.add('active');
 					loading.classList.add('active');
@@ -92,6 +108,7 @@ export default class Content extends Component {
 	};
 
 	componentDidMount() {
+		this.fetchApi2();
 		setInterval(() => this.fetchApi2(), 15000);
 	}
 
@@ -100,35 +117,33 @@ export default class Content extends Component {
 	};
 
 	render() {
-		const wrapperSpinner = document.querySelector('.wrapper_spinner');
-		const loading = document.querySelector('.loading');
 		return (
 			<div className="container_content">
 				{this.state.isLoaded || !this.state.players ? (
 					<Spinner status="active" />
 				) : (
 					<div className="game_view_wrapper">
-						<Spinner
-							status={
-								this.state.isLoaded || !this.state.players ? (
-									'active'
-								) : wrapperSpinner.classList.value.includes('active') &&
-								loading.classList.value.includes('active') ? (
-									'active'
-								) : (
-									'deActive'
-								)
-							}
-						/>
+						<Spinner status={this.state.isLoaded || !this.state.players ? 'active' : 'deActive'} />
 						<div className="header">
 							<div className="server_wrapper">
 								<div className="description_server">
-									<p>server: {this.state.nameServer}</p>
-									<p>address server: {this.state.addressServer}</p>
 									<p>
-										max players: {this.state.maxPlayers} / {this.state.players.length}
+										{' '}
+										<span className="description_server_text">server: </span>
+										{this.state.nameServer}
 									</p>
-									<p>status: {this.state.status}</p>
+									<p>
+										<span className="description_server_text">address server: </span>
+										{this.state.addressServer}
+									</p>
+									<p>
+										<span className="description_server_text">max players: </span>
+										{this.state.maxPlayers} / {this.state.players.length}
+									</p>
+									<p>
+										<span className="description_server_text">status: </span>
+										{this.state.status}
+									</p>
 								</div>
 								<div className="wrapper_change_server">
 									<Server changeUrl={this.changeServer} />

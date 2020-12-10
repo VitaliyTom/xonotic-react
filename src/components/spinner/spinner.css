@@ -1,7 +1,20 @@
-.loading {
+.loading.deActive{
 	position: absolute;
-	top: 35%;
-	left: 40%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 4rem;
+	z-index: -1;
+}
+
+
+.loading.active{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	font-size: 4rem;
 	z-index: 100;
 }
@@ -15,18 +28,23 @@
 	background: rgba(0, 0, 0, 0.9);
 }
 
-.wrapper_spinner {
+.wrapper_spinner.deActive {
 	display: none;
 	position: relative;
 	width: 256px;
 	height: 256px;
+	z-index: -1;
 }
 
 .wrapper_spinner.active {
 	position: relative;
 	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 256px;
 	height: 256px;
+	z-index: 100;
 }
 
 .spinner.active {
@@ -36,17 +54,21 @@
 	height: 256px;
 	border-radius: 50%;
 	background-image: url('../../assets/xonotic_256.png');
+	background-size: cover;
 	z-index: 100;
 }
 
 .wrapper_spinner.active .shadow {
 	position: absolute;
+	display: block;
 	width: 256px;
 	height: 256px;
+	top: 0;
+	left: 0;
 	border-radius: 50%;
 	background-color: rgba(253, 173, 0, 0.3);
 	animation: Shadow 1.5s ease-out infinite;
-	z-index: 30;
+	z-index: 99;
 }
 
 .wrapper_spinner.active .shadow.one {
@@ -64,7 +86,9 @@
 .loading_text {
 	position: absolute;
 	bottom: -150px;
-	left: 25%;
+	font-size: 2.5rem;
+	left: 50%;
+	transform: translate(-50%, 0);
 	color: rgba(253, 173, 0);
 	z-index: 150;
 }
@@ -77,5 +101,36 @@
 		transform: scale(1.4);
 		background-color: rgba(253, 173, 0, 0);
 		filter: blur(2px);
+	}
+}
+
+@media (max-width: 600px) {
+	.wrapper_spinner {
+		width: 128px;
+		height: 128px;
+	}
+
+	.wrapper_spinner.active {
+		width: 128px;
+		height: 128px;
+	}
+
+	.spinner.active {
+		width: 128px;
+		height: 128px;
+	}
+
+	.wrapper_spinner.active .shadow {
+		width: 128px;
+		height: 128px;
+	}
+
+	.loading_text {
+		bottom: -100px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		color: rgba(253, 173, 0);
+		font-size: 1.8rem;
+		z-index: 150;
 	}
 }

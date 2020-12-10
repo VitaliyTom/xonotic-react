@@ -27,8 +27,15 @@
 
 .wrapper_change_server {
 	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	max-width: 470px;
 	border: 1px solid rgb(55, 107, 45);
 	border-radius: 25px;
+}
+
+.change_server{
+	width: 100%;
 }
 
 button:active,
@@ -41,9 +48,10 @@ button::-moz-focus-inner {
 }
 
 .change_server button {
-	width: 150px;
+	min-width: 150px;
+	width: 100%;
 	height: 50px;
-	padding: 20px 2px;
+	padding: 0px 5px;
 	text-align: center;
 	color: rgb(253, 173, 0);
 	cursor: pointer;
@@ -82,4 +90,126 @@ button::-moz-focus-inner {
 
 .description_server p {
 	margin: 5px 0 0;
+}
+
+.description_server_text{
+	font-size: 2.3rem;
+	font-weight: 900;
+	color: rgb(107, 99, 99);
+}
+
+@media (max-width: 850px) {
+	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		color: rgb(253, 173, 0);
+	}
+
+	.description_server {
+		margin: 20px 0;
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.description_server p {
+		text-align: center;
+	}
+
+	.server_wrapper {
+		margin: 0 15px;
+	}
+
+	.players {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.spectator {
+		width: 100%;
+		border-top-right-radius: 25px;
+		border-bottom-left-radius: 0;
+	}
+
+	.played {
+		width: 100%;
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 25px;
+	}
+}
+
+@media (max-width: 600px) {
+	.game_view_wrapper {
+		margin: 0;
+	}
+
+	.wrapper_change_server {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		border: 1px solid rgb(55, 107, 45);
+		border-radius: 25px;
+	}
+
+	.server_wrapper {
+		flex-direction: column-reverse;
+		width: 100%;
+		margin: 15px 0 0 0;
+	}
+
+	.description_server p {
+		font-size: 1.5rem;
+	}
+
+	.description_server_text{
+		font-size: 1.5rem;
+		
+	}
+
+	.map_wrapper {
+		margin: 0;
+	}
+
+	.change_server {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.change_server button {
+		width: 90%;
+		border-radius: 0;
+		margin: 5px;
+		padding: 10px;
+		height: 38px;
+	}
+
+	.btn {
+		border-radius: 0;
+	}
+
+	.change_server button.active {
+		border-radius: 8px;
+	}
+
+	.change_server button:hover {
+		border-radius: 25px;
+		box-shadow: 0 0 5px 1px rgb(253, 173, 0) inset;
+		transition: .4s;
+	}
+
+	.btn.server_one {
+		margin-top: 10px;
+	}
+
+	.btn.server_three {
+		margin-bottom: 10px;
+	}
+
+	.spectator {
+		border-bottom: none;
+	}
 }

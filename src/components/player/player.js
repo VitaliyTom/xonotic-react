@@ -14,12 +14,14 @@ export default class Player extends Component {
 	}
 
 	render() {
-		const { name, ping, score} = this.state.item;
+		const { name, ping, score } = this.state.item;
 		return (
 			<React.Fragment>
 				<HtmlComponent name={ReactHtmlParser(name === '' ? 'anonymous' : name)} />
-				<p className="score">{score !== -666 ? <span>score: {score}</span> : null}</p>
-				<p className="ping"> ping: {ping}</p>
+				<div className="wrapper_score_ping">
+					<p className="score">{score !== -666 ? <span>score: {score}</span> : null} </p>
+					<p className="ping"> ping: {ping}</p>
+				</div>
 			</React.Fragment>
 		);
 	}
