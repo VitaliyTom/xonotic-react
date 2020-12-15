@@ -15,6 +15,7 @@ export default class Player extends Component {
 
 	render() {
 		const { name, ping, score } = this.state.item;
+
 		return (
 			<React.Fragment>
 				<HtmlComponent name={ReactHtmlParser(name === '' ? 'anonymous' : name)} />

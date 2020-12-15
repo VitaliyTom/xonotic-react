@@ -20,6 +20,10 @@ body {
 	color: whitesmoke;
 }
 
+body.active {
+	overflow-y: hidden;
+}
+
 #root {
 	margin: 0 auto;
 }

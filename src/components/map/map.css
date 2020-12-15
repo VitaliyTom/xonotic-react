@@ -14,12 +14,9 @@
 	box-shadow: 0 0 5px 1px rgb(253, 173, 0);
 }
 
-.description_map_text{
-	font-weight: 900;	
+.description_map_text {
+	font-weight: 900;
 	color: rgb(107, 99, 99);
-
-	/* color: rgb(41, 35, 35); */
-	/* text-shadow: 0 0 15px rgb(253, 173, 0); */
 }
 
 @media (max-width: 600px) {

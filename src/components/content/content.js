@@ -19,7 +19,7 @@ export default class Content extends Component {
 		};
 	}
 
-	async componentDidUpdate(prevProps, prevState, snapshot) {
+	async componentDidUpdate(prevProps, prevState) {
 		if (this.state.url !== prevState.url) {
 			this.fetchApi2(true);
 		}
@@ -53,6 +53,7 @@ export default class Content extends Component {
 			const loading = document.querySelector('.loading');
 			const wrapperShadow = document.querySelector('.wrapper_shadow');
 			const spinner = document.querySelector('.spinner');
+			const body = document.querySelector('body');
 
 			if (
 				name !== 'SYSERROR' &&
@@ -83,6 +84,7 @@ export default class Content extends Component {
 				wrapperShadow.classList.add('deActive');
 				spinner.classList.add('deActive');
 
+				body.classList.remove('active');
 				spinner.classList.remove('active');
 				wrapperSpinner.classList.remove('active');
 				loading.classList.remove('active');
@@ -98,6 +100,7 @@ export default class Content extends Component {
 					wrapperShadow.classList.remove('deActive');
 					spinner.classList.remove('deActive');
 
+					body.classList.add('active');
 					wrapperSpinner.classList.add('active');
 					loading.classList.add('active');
 					wrapperShadow.classList.add('active');

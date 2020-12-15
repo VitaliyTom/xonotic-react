@@ -10,6 +10,8 @@ export default class HtmlComponent extends React.Component {
 	}
 
 	render() {
-		return <div className="player_name">{ReactHtmlParser(this.props.name)}</div>;
+		return (
+			<div className="player_name">{this.props.name === '' ? 'anonymous' : ReactHtmlParser(this.props.name)}</div>
+		);
 	}
 }

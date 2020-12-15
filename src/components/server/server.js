@@ -12,11 +12,13 @@ export default class Server extends Component {
 		const loading = document.querySelector('.loading');
 		const wrapperShadow = document.querySelector('.wrapper_shadow');
 		const spinner = document.querySelector('.spinner');
+		const body = document.querySelector('body');
 
 		wrapperSpinner.classList.add('active');
 		loading.classList.add('active');
 		wrapperShadow.classList.add('active');
 		spinner.classList.add('active');
+		body.classList.add('active');
 
 		for (let i = 0; i < button.length; i++) {
 			button[i].classList.remove('active');

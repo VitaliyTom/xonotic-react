@@ -34,7 +34,7 @@
 	border-radius: 25px;
 }
 
-.change_server{
+.change_server {
 	width: 100%;
 }
 
@@ -92,7 +92,7 @@ button::-moz-focus-inner {
 	margin: 5px 0 0;
 }
 
-.description_server_text{
+.description_server_text {
 	font-size: 2.3rem;
 	font-weight: 900;
 	color: rgb(107, 99, 99);
@@ -156,6 +156,7 @@ button::-moz-focus-inner {
 
 	.server_wrapper {
 		flex-direction: column-reverse;
+		align-items: center;
 		width: 100%;
 		margin: 15px 0 0 0;
 	}
@@ -164,9 +165,8 @@ button::-moz-focus-inner {
 		font-size: 1.5rem;
 	}
 
-	.description_server_text{
+	.description_server_text {
 		font-size: 1.5rem;
-		
 	}
 
 	.map_wrapper {

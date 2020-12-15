@@ -103,6 +103,11 @@
 		font-size: 1.2rem;
 	}
 
+	.red_team,
+	.blue_team {
+		width: 100%;
+	}
+
 	.spectator .player_name {
 		font-size: 1.6rem;
 	}
