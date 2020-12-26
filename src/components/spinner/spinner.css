@@ -1,4 +1,4 @@
-.loading.deActive{
+.loading.deActive {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -9,8 +9,7 @@
 	overflow-y: hidden;
 }
 
-
-.loading.active{
+.loading.active {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -26,7 +25,7 @@
 	left: 0;
 	min-width: 100vw;
 	min-height: 100vh;
-	background: rgba(0, 0, 0, 0.9);	
+	background: rgba(0, 0, 0, 0.9);
 }
 
 .wrapper_spinner.deActive {

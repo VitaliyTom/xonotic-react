@@ -69,15 +69,19 @@
 	margin: 15px;
 }
 
-.red_team_text {
+.red_team_text,
+.number_red_team_text {
 	color: rgb(255, 1, 1);
 }
 
-.blue_team_text {
+.blue_team_text,
+.number_blue_team_text {
 	color: rgb(0, 204, 255);
 }
 
 .played_text,
-.spectators_text {
+.spectators_text,
+.number_played,
+.number_spectators {
 	color: rgb(253, 173, 0);
 }

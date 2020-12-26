@@ -8,11 +8,8 @@
 
 h1 {
 	font-size: 4.4rem;
-	/* color: rgb(41, 35, 35);
-	text-shadow: 0px 0px 25px rgb(253, 173, 0); */
 	color: rgb(107, 99, 99);
 	text-shadow: 0px 0px 25px rgb(107, 99, 99);
-	
 }
 
 @media (max-width: 600px) {

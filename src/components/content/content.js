@@ -15,7 +15,7 @@ export default class Content extends Component {
 			error: null,
 			isLoaded: false,
 			players: null,
-			url: 'https://dpmaster.deathmask.net/?game=xonotic&showplayers=1&json=1&server=89.163.144.234:26000'
+			url: 'https://dpmaster.deathmask.net/?game=xonotic&showplayers=1&json=1&server=pub.regulars.win:26000'
 		};
 	}
 
@@ -58,6 +58,7 @@ export default class Content extends Component {
 			if (
 				name !== 'SYSERROR' &&
 				status !== 'timeout' &&
+				status !== 'offline' &&
 				numplayers === (players === undefined ? 0 : players.length)
 			) {
 				this.setState({
@@ -90,6 +91,16 @@ export default class Content extends Component {
 				loading.classList.remove('active');
 				wrapperShadow.classList.remove('active');
 			} else {
+				// if (name === 'SYSERROR') {
+				// 	console.log(name);
+				// }
+				// if (status === 'timeout' || status === 'offline') {
+				// 	console.log(status);
+				// }
+				// if (numplayers === (players === undefined ? 0 : players.length)) {
+				// 	console.log('fetch players error');
+				// }
+
 				this.setState({
 					isLoaded: false
 				});

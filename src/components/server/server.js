@@ -34,7 +34,7 @@ export default class Server extends Component {
 					<button
 						className="btn server_one active"
 						onClick={this.handleClick}
-						value="https://dpmaster.deathmask.net/?game=xonotic&showplayers=1&json=1&server=89.163.144.234:26000"
+						value="https://dpmaster.deathmask.net/?game=xonotic&showplayers=1&json=1&server=pub.regulars.win:26000"
 					>
 						The Regulars Instagib
 					</button>
@@ -43,7 +43,7 @@ export default class Server extends Component {
 					<button
 						className="btn server_two"
 						onClick={this.handleClick}
-						value="https://dpmaster.deathmask.net/?game=xonotic&showplayers=1&json=1&server=89.163.144.234:26001"
+						value="https://dpmaster.deathmask.net/?game=xonotic&showplayers=1&json=1&server=pub.regulars.win:26001"
 					>
 						The Regulars Votable
 					</button>
